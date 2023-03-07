@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/LewisMoore0/spc-platform/issues"
   },
-  "homepage": "https://github.com/LewisMoore0/spc-platform#readme"
+  "homepage": "https://github.com/LewisMoore0/spc-platform#readme",
+  "devDependencies": {
+    "@tsconfig/node18": "^1.0.1"
+  }
 }
