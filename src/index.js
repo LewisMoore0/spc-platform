@@ -2,3 +2,5 @@
 let stringFunction = (string) => {
     return [string];
 };
+
+export { stringFunction }
