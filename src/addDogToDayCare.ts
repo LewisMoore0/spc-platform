@@ -1,9 +1,10 @@
 import { Dog } from "./createNewDog"
 
+let daycareArray: Dog[] = []
+
 let addDogToDayCare = (dog: Dog) => {
-    return [
-        dog
-    ]
+    daycareArray.push(dog)
+    return daycareArray
 }
 
 export { addDogToDayCare }
