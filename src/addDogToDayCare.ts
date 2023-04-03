@@ -1,13 +1,14 @@
 import { Dog } from "./createNewDog"
+import { Entry } from "./createEntry"
 
-let daycareArray: Dog[] = []
 
-let addDogToDayCare = (dog: Dog) => {
-    if (daycareArray.length === 10) {
+let addDogToDayCare = (dayCare: Entry, dog: Dog) => {
+    if (dayCare.dogs.length === 10) {
         return 'The maximum number of dogs has been reached'
     }
-    daycareArray.push(dog)
-    return daycareArray
+    dayCare.dogs.push(dog)
+    return dayCare
+
 }
 
 export { addDogToDayCare }

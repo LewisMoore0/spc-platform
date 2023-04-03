@@ -1,23 +1,14 @@
 import { addDogToDayCare } from '../src/addDogToDayCare'
+import { createEntry } from '../src/createEntry'
+import { createNewDog } from '../src/createNewDog'
+
+test('addDogToDayCare adds dog to dogs array on given entry object', () => {
+    let dayCareEntry = createEntry('3/4/23', [])
+    let dogEntry = createNewDog('Piper', 'German Shepherd', '3')
 
 
-test('addDogToDayCare adds given Dog argument to array', () => {
-    let dog = { name: 'Piper' }
-
-    expect(addDogToDayCare(dog)).toEqual([{ name: 'Piper'}])
-}) 
-
-test('daycareArray cannot contain more than 10 elements', () => {
-    addDogToDayCare({ name: 'Piper'})
-    addDogToDayCare({ name: 'Piper'})
-    addDogToDayCare({ name: 'Piper'})
-    addDogToDayCare({ name: 'Piper'})
-    addDogToDayCare({ name: 'Piper'})
-    addDogToDayCare({ name: 'Piper'})
-    addDogToDayCare({ name: 'Piper'})
-    addDogToDayCare({ name: 'Piper'})
-    addDogToDayCare({ name: 'Piper'})
-    addDogToDayCare({ name: 'Piper'})
-
-    expect(addDogToDayCare({ name: 'Piper'})).toEqual('The maximum number of dogs has been reached')
+    expect(addDogToDayCare(dayCareEntry, dogEntry)).toEqual({
+        date: '3/4/23',
+        dogs: [dogEntry]
+    })
 })
