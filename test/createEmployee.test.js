@@ -1,6 +1,6 @@
 import { createEmployee } from '../src/createEmployee'
 
 
-test('createNewDog function creates a new dog object', () => {
+test('creatEmployee function creates a new employee object', () => {
     expect(createEmployee('Lewis')).toEqual({ name: 'Lewis' })
 }) 
