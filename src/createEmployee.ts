@@ -2,7 +2,7 @@ export interface Employee {
     name: string;
 }
 
-let createEmployee = (name: string) => {
+const createEmployee = (name: string) => {
     return {
         name: name
     }
